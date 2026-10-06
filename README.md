@@ -1,6 +1,10 @@
 # SAEParate: Disentangled Sparse Representations for Concept-Separated Diffusion Unlearning
 
+**NeurIPS 2026 (Poster)**
+
 Official implementation of **SAEParate**, an SAE training framework for concept unlearning in text-to-image diffusion models.
+
+> **Note:** Trained SAEParate SAE checkpoints will be released after the conference presentation. Until then, you can train them from scratch with the pipelines below.
 
 Sparse autoencoder (SAE)-based unlearning suppresses a target concept by manipulating sparse latent features while keeping the diffusion model frozen. Features learned only for reconstruction are often shared across related concepts, so suppressing one concept also damages retained ones. SAEParate structures the SAE latent space by concept identity. It does this with three components:
 
@@ -42,6 +46,8 @@ wandb login            # or run with WANDB_MODE=offline / disabled
 (Alternatively, set `SETUP_VENV=true REINSTALL_REQUIREMENTS=true` and run mode `setup` to have the pipeline create `.venvs/<RUN_NAME>`.)
 
 ### 1.2 Checkpoints
+
+> Pretrained SAEParate SAE checkpoints will be released after the NeurIPS 2026 presentation. For now, train the SAEs with the pipelines below. Once the checkpoints are available, you can skip training with `SKIP_TRAIN_SAE=true SAE_CHECKPOINT=<path>`.
 
 You need the UnlearnCanvas fine-tuned SD v1.5 model and the UnlearnCanvas style/object classifiers, placed like this:
 
@@ -395,9 +401,10 @@ Every script prints its full list of options with `--help`.
 
 ```bibtex
 @inproceedings{saeparate,
-  title  = {Disentangled Sparse Representations for Concept-Separated Diffusion Unlearning},
-  author = {TBD},
-  year   = {TBD}
+  title     = {Disentangled Sparse Representations for Concept-Separated Diffusion Unlearning},
+  author    = {TBD},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 ```
 
