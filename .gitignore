@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.venvs/
+
+# Large artifacts produced by the pipelines
+checkpoints/
+sae-ckpts/
+runs/
+wandb/
+*.log
